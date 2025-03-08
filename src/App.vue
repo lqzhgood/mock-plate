@@ -1,9 +1,15 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 import Plate from './components/Plate.vue';
 import ToolBar from './components/ToolBar.vue';
 
-const plate = ref('AB6TA23');
+const LOCAL_PLATE_NAME = 'plate';
+
+const plate = ref(localStorage.getItem(LOCAL_PLATE_NAME) || '');
+
+watch(plate, v => {
+    localStorage.setItem(LOCAL_PLATE_NAME, v);
+});
 </script>
 
 <template>

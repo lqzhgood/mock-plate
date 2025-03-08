@@ -1,6 +1,6 @@
 <template>
     <div class="plate">
-        <img src="../assets/img/14.bmp" class="img" />
+        <img src="../assets/bg/14.png" class="img" />
         <div class="textWrap" :style="{ color: rule.font }">
             <div class="text">
                 <span class="province">{{ province }}</span>
@@ -48,7 +48,7 @@ export default defineComponent({
 <style lang="sass" scoped>
 @font-face
     font-family: 'plateHz'
-    src: url('../assets/plateHz.woff2') format('woff2')
+    src: url('../assets/plateHz-mini.woff2') format('woff2')
     font-weight: normal
     font-style: normal
 @font-face
@@ -58,7 +58,6 @@ export default defineComponent({
     font-style: normal
 
 .plate
-    background: url('../assets/img/11.bmp')
     position: relative
     .img
         width: 100%

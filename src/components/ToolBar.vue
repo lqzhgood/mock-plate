@@ -1,9 +1,6 @@
 <template>
-    <div
-        id="ToolBar"
-        @click="toggleHidden = !toggleHidden"
-        :class="{ hidden: toggleHidden }"
-    >
+    <div id="ToolBar" :class="{ hidden: toggleHidden }">
+        <div class="cover" @click.capture="toggleHidden = !toggleHidden"></div>
         <div class="bar">
             <select
                 :value="province"
@@ -76,8 +73,13 @@ export default defineComponent({
     color: #333
     display: flex
     align-items: flex-end
+    flex-direction: column
     &.hidden
         opacity: 0
+    .cover
+        flex: 1
+        width: 100%
+        height: 100%
     .bar
         display: flex
         display: inline-block

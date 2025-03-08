@@ -1,12 +1,12 @@
 const rules = [
     {
         mode: 'blue_all',
-        img: './assets/img/13.bmp',
+        img: './assets/bg/13.png',
         font: '#fff',
     },
     {
         mode: 'blue_up',
-        img: './assets/img/14.bmp',
+        img: './assets/bg/14.png',
         font: '#fff',
     },
 ] as const;
