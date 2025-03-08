@@ -14,7 +14,7 @@ const rules = [
 export type MODE = (typeof rules)[number]['mode'];
 
 export function getRules(mode: MODE) {
-    return rules[0];
+    return rules.find(r => r.mode === mode)!;
 }
 
 export const provinceList = [
